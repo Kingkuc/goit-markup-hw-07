@@ -210,28 +210,109 @@ align-items: center;
 gap: 30px;
 }
 }
-
+/* Mobile */
 .section-hero {
-  background: #2f303a;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #2f303a;
   padding: 200px 0;
   height: 600px;
   margin: 0 auto;
-  background-image: url(../images/section-hero-background.jpg);
+  background-image: url(../images/section-hero-background-mobile.jpg);
   max-width: 1600px;
   box-shadow: inset 0 0 0 1600px rgba(47, 48, 58, 0.4);
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-color: #2f303a;
+    background-image: url(../images/section-hero-background-mobile@2x.jpg);
+  }
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .section-hero {
+    background-color: #2f303a;
+    background-image: url(../images/section-hero-background-tablet.jpg);
+  }
+}
+@media screen and (min-width: 768px) and ((min-device-pixel-ratio: 2) or (min-resolution: 192dpi) or (min-resolution: 2dppx)) {
+  .section-hero {
+    background-color: #2f303a;
+    background-image: url(../images/section-hero-background-tablet@2x.jpg); 
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    background-color: #2f303a;
+    background-image: url(../images/section-hero-background-desktop.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and ((min-device-pixel-ratio: 2) or
+(min-resolution: 192dpi) or
+(min-resolution: 2dppx)) {
+  .section-hero {
+    background-color: #2f303a;
+    background-image: url(../images/section-hero-background-desktop@2x.jpg); 
+  }
+}
+
+/* Mobile */
+@media screen and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .section-hero {
+    background-color: #2f303a;
+    background-image: url(../images/section-hero-background-mobile@2x.jpg);
+  }
+}
+/* Tablet */
+@media screen and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .section-hero {
+    background-color: #2f303a;
+    background-image: url(../images/section-hero-background-tablet@2x.jpg);
+  }
+}
+/* Desktop */
+@media screen and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .section-hero {
+    background-color: #2f303a;
+    background-image: url(../images/section-hero-background-desktop@2x.jpg);
+  }
+}
+
 .section-hero-header {
-  font-weight: 900;
+width: 365px;
+margin: 0 auto;
+color: #FFF;
+text-align: center;
+font-size: 26px;
+font-weight: 900;
+line-height: 1.61;
+letter-spacing: 1.56px;
+text-transform: uppercase; 
+display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero-header {
+  width: 696px; 
   font-size: 44px;
-  line-height: 1.4;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
-  display: block;
-  width: 696px;
-  margin: 0 auto;
+  line-height: 1.37;
+  letter-spacing: 2.64px; 
+  }
 }
 
 .section-hero-button {
