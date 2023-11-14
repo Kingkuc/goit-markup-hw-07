@@ -76,22 +76,6 @@ header {
 border-bottom: 1px solid #ececec;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  padding-top: 15px;
-  padding-bottom: 15px;
-  gap: 371px;
-}
-
-.header-left-side {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 93px;
-}
-
 .logo {
   font-family: "Raleway";
   color: #000000;
@@ -104,6 +88,40 @@ border-bottom: 1px solid #ececec;
 
 .logo-accent {
   color: var(--brand-accent-color);
+}
+
+@media screen and (min-width: 320px) {
+  .header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .nav-wrapper {
+    display: none;
+  }
+  .contact-links {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+.header { 
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.header-left-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 83px;
+}
+.nav-wrapper {
+  display: block;
 }
 .nav-links {
   list-style: none;
@@ -147,38 +165,51 @@ border-bottom: 1px solid #ececec;
 }
 
 .contact-links {
-list-style: none;
-display: flex;
+  flex-direction: column;
+  list-style: none;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  }
+
+.contact-link {
+    display: flex;
+    text-decoration: none;
+    color: #757575;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    align-items: center;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact-link:hover,
+  .contact-link:focus {
+    color: var(--brand-accent-color);
+    fill: var(--brand-accent-color);
+  }
+  
+  .contacts-icons {
+    color:#757575;
+    margin-right: 10px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+.header-left-side {
+  gap: 93px;
+}
+
+.contact-links {
+flex-direction: row;
 justify-content: flex-end;
-list-style: none;
 align-items: center;
 gap: 30px;
 }
-
-.contact-link {
-  display: flex;
-  text-decoration: none;
-  color: #757575;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  align-items: center;
-  transition-property: color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-link:hover,
-.contact-link:focus {
-  color: var(--brand-accent-color);
-  fill: var(--brand-accent-color);
-}
-
-.contacts-icons {
-  color:#757575;
-  margin-right: 10px;
-  }
 
 .section-hero {
   background: #2f303a;
@@ -294,16 +325,22 @@ gap: 30px;
 <!-------MOBILE MENU------------------>
 
 .menu-toggle {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  background: transparent;
-  border: none;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
   cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
   fill: rgba(0, 0, 0, 1);
 }
 
-@media (min-width: 481px) {
+@media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
