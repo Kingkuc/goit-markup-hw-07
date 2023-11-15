@@ -512,6 +512,7 @@ display: block;
   line-height: normal;
   letter-spacing: 0.72px;
   text-decoration: none;
+  font-style: normal;
 }
 
 .mobile-address-mail {
@@ -566,7 +567,7 @@ color: var(--brand-accent-color);
 font-size: 18px;
 font-style: normal;
 font-weight: 500;
-line-height: 1.22;
+line-height: 
 letter-spacing: 0.36px; 
 }
 
