@@ -1207,7 +1207,7 @@ background-color: var(--brand-accent-color);
     outline: none;
   } 
 
-.footer-input-wrapper > input::placeholder {
+.input-wrapper > input::placeholder {
   display: block;
   color: rgba(255, 255, 255, 0.60);
   font-size: 16px;
