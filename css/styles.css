@@ -426,30 +426,22 @@ display: block;
 <!-------MOBILE MENU------------------>
 
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
+  background: transparent;
   border: none;
-  border-radius: 50%;
-  outline: none;
-  fill: rgba(0, 0, 0, 1);
-}
-
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
+  width: 40px;
+  height: 40px;
+  fill: var(--brand-text-color);
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
   fill: var(--brand-accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
 }
 
 .menu-container {
@@ -461,11 +453,12 @@ display: block;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 80px 60px 40px 40px;
-  background-color: var(--white);
-  z-index: 999;
+  padding: 48px 40px;
+  background-color: rgba(255, 255, 255, 1);
   transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
 }
 
@@ -477,16 +470,19 @@ display: block;
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-bottom: 284px;
+  margin-bottom: 306px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.1;
-  text-transform: capitalize;
-  color: #2e2f42;
+  color: #212121;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px; 
   text-decoration: none;
   transition-property: color;
   transition-duration: 250ms;
@@ -494,7 +490,7 @@ display: block;
 }
 .mobile-menu .link:hover,
 .mobile-menu .link:focus {
-  color: #404bbf;
+  color: var(--brand-accent-color);
 }
 
 .mobile-address {
@@ -502,71 +498,78 @@ display: block;
   margin: 0;
   list-style: none;
   margin-bottom: 48px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .mobile-address-tel {
-  display: flex;
-  color: #4d5ae5;
-  font-family: inherit;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.1;
+  letter-spacing: 0.68px; 
+  display: block;
+  color: var(--brand-accent-color);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: normal;
   letter-spacing: 0.72px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 40px;
-}
-.mobile-address-tel:hover,
-.mobile-address-tel:focus {
-  color: #404bbf;
+  text-decoration: none;
 }
 
 .mobile-address-mail {
-  display: flex;
-  color: #434455;
-  font-family: inherit;
-  font-size: 20px;
+  display: block;
+  color: #757575;
+  font-family: Roboto;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.4px;
+  line-height: normal;
+  text-decoration: none;
+  letter-spacing: 0.48px; 
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-address-mail:hover,
 .mobile-address-mail:focus {
-  color: #404bbf;
+  color: var(--brand-accent-color);
 }
 
 .moblie-social-links {
   list-style: none;
   display: flex;
-  gap: 56px;
+  gap: 20px;
 }
 
 .modal-close-button {
-  width: 24px;
-  height: 24px;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--cornflower);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
   padding: 0;
-  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
 
-.close-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.toggle-open {
+  background-color: transparent;
+  border: none; 
 }
-  
+
+.link-social-media-container > a {
+text-decoration: none;
+color: var(--brand-accent-color);
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 1.22;
+letter-spacing: 0.36px; 
+}
+
 .modal-input-wrapper, .textarea {
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.20);
