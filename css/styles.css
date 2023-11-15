@@ -682,16 +682,47 @@ display: block;
 .text-list-1-points {
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 30px;
+}
+
+.text-list-1-header {
+  width: 270px; 
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.42px; 
+  text-transform: uppercase;
   padding: 0;
+  margin: 0 auto;
 }
 
 .text-list-1-position {
   flex-basis: calc((100% - 90px) / 4);
-  padding: 0;
+  }
+
+@media screen and (min-width: 768px) {
+.text-list-1-points {
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+  .text-list-1-header {
+    text-align: left;
+    margin: 0;
+  }
 }
+
+@media screen and (min-width: 1200px) {
+  .text-list-1-points {
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 1600px;
+    height: 2931px;
+    width: 1170px;
+    height: 251px;
+    flex-shrink: 0;
+    margin: 0 auto;
+  }}
 
 .our-atuts-cointainer{
 display: flex;
@@ -714,16 +745,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 padding: 0;
 }
 
-.text-list-1-header {
-  text-align: left;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-align: left;
-  padding: 0;
-  margin: 0 auto 10px 0;
-}
 
 .text-list-1-paragraf {
   text-align: justify;
